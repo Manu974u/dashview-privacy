@@ -3,132 +3,362 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DashViewCar — Politique de confidentialité</title>
+  <title>DashViewCar — Privacy Policy</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; line-height: 1.6; }
-    h1 { color: #0066CC; }
-    h2 { color: #0F1923; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-    .lang-switch { text-align: right; margin-bottom: 20px; }
-    .lang-switch a { color: #0066CC; cursor: pointer; text-decoration: underline; margin-left: 10px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0F1923;
+      color: #E8EDF2;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0F1923 0%, #1E2D3D 100%);
+      border-bottom: 1px solid #00D4FF33;
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: 800;
+      color: #00D4FF;
+      letter-spacing: -1px;
+    }
+
+    .logo span { color: #FFFFFF; }
+
+    header p {
+      color: #8A9BB0;
+      margin-top: 6px;
+      font-size: 0.95em;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid #00D4FF55;
+      color: #8A9BB0;
+      padding: 6px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85em;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active, .lang-btn:hover {
+      background: #00D4FF15;
+      border-color: #00D4FF;
+      color: #00D4FF;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .updated {
+      text-align: center;
+      color: #8A9BB0;
+      font-size: 0.85em;
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #00D4FF15;
+      border: 1px solid #00D4FF44;
+      color: #00D4FF;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8em;
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: #1E2D3D;
+      border: 1px solid #00D4FF33;
+      border-left: 3px solid #00D4FF;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 1.05em;
+    }
+
+    .highlight-box strong { color: #00D4FF; }
+
+    h2 {
+      color: #FFFFFF;
+      font-size: 1.1em;
+      font-weight: 600;
+      margin: 36px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #1E2D3D;
+    }
+
+    .perm-grid {
+      display: grid;
+      gap: 10px;
+    }
+
+    .perm-item {
+      background: #1E2D3D;
+      border-radius: 8px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .perm-icon {
+      font-size: 1.4em;
+      flex-shrink: 0;
+    }
+
+    .perm-name {
+      color: #00D4FF;
+      font-size: 0.8em;
+      font-weight: 600;
+      font-family: monospace;
+      margin-bottom: 3px;
+    }
+
+    .perm-desc {
+      color: #8A9BB0;
+      font-size: 0.88em;
+      line-height: 1.4;
+    }
+
+    .no-collect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .no-item {
+      background: #1E2D3D;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #8A9BB0;
+      font-size: 0.88em;
+    }
+
+    .no-item span:first-child { font-size: 1.1em; }
+
+    p {
+      color: #8A9BB0;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    a { color: #00D4FF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      border-top: 1px solid #1E2D3D;
+      color: #8A9BB0;
+      font-size: 0.85em;
+    }
+
     .section-en { display: none; }
-    .updated { color: #888; font-size: 0.9em; }
+
+    @media (max-width: 500px) {
+      .no-collect-grid { grid-template-columns: 1fr; }
+      .logo { font-size: 1.5em; }
+    }
   </style>
 </head>
 <body>
 
-<div class="lang-switch">
-  <a onclick="showFR()">🇫🇷 Français</a>
-  <a onclick="showEN()">🇬🇧 English</a>
+<header>
+  <div class="logo">Dash<span>View</span>Car</div>
+  <p>Your phone. Your dashcam. Your data stays yours.</p>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="showFR(this)">🇫🇷 Français</button>
+    <button class="lang-btn" onclick="showEN(this)">🇬🇧 English</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- FRANÇAIS -->
+  <div class="section-fr">
+    <p class="updated">Dernière mise à jour : avril 2025</p>
+
+    <div class="highlight-box">
+      <strong>🔒 Résumé en une ligne :</strong><br>
+      DashViewCar ne collecte, ne stocke et ne transmet <strong>aucune donnée personnelle</strong>. Tout reste sur votre appareil.
+    </div>
+
+    <h2>👤 Qui sommes-nous</h2>
+    <p>DashViewCar est une application Android développée par Emmanuel Ulderic, développeur indépendant basé en France (Alsace). Contact : <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
+
+    <h2>📊 Données collectées</h2>
+    <p>L'application fonctionne entièrement <strong style="color:#fff">hors ligne</strong>. Aucune donnée ne quitte votre appareil.</p>
+
+    <div class="perm-grid">
+      <div class="perm-item">
+        <div class="perm-icon">🎤</div>
+        <div>
+          <div class="perm-name">MICROPHONE</div>
+          <div class="perm-desc">Reconnaissance vocale locale uniquement (moteur Vosk offline). Aucun audio transmis à des serveurs.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">📷</div>
+        <div>
+          <div class="perm-name">CAMÉRA</div>
+          <div class="perm-desc">Enregistrement vidéo dashcam. Les clips sont stockés uniquement sur votre appareil.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">📍</div>
+        <div>
+          <div class="perm-name">LOCALISATION GPS</div>
+          <div class="perm-desc">Détection des chutes de vitesse brutales et horodatage des clips. Les coordonnées ne quittent jamais votre appareil.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">💾</div>
+        <div>
+          <div class="perm-name">STOCKAGE</div>
+          <div class="perm-desc">Sauvegarde locale des clips dans le dossier <code style="color:#00D4FF">/DashViewCar/clips/</code>.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🚫 Ce que nous ne faisons PAS</h2>
+    <div class="no-collect-grid">
+      <div class="no-item"><span>❌</span><span>Aucun compte requis</span></div>
+      <div class="no-item"><span>❌</span><span>Aucun serveur externe</span></div>
+      <div class="no-item"><span>❌</span><span>Aucun tracking pub</span></div>
+      <div class="no-item"><span>❌</span><span>Aucun partage tiers</span></div>
+      <div class="no-item"><span>❌</span><span>Aucun cookie</span></div>
+      <div class="no-item"><span>❌</span><span>Aucune analytics</span></div>
+    </div>
+
+    <h2>🔐 Sécurité</h2>
+    <p>Toutes les données restent sur votre appareil. L'application ne dispose d'aucune connexion réseau pour transmettre vos données. Le code source est disponible sur <a href="https://github.com/Manu974u/Dashview" target="_blank">GitHub</a>.</p>
+
+    <h2>👶 Enfants</h2>
+    <p>DashViewCar n'est pas destinée aux enfants de moins de 13 ans et ne collecte aucune donnée les concernant.</p>
+
+    <h2>📝 Modifications</h2>
+    <p>Cette politique peut être mise à jour. La date de dernière modification est indiquée en haut de cette page.</p>
+
+    <h2>✉️ Contact</h2>
+    <p>Pour toute question concernant la confidentialité : <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="section-en">
+    <p class="updated">Last updated: April 2025</p>
+
+    <div class="highlight-box">
+      <strong>🔒 One-line summary:</strong><br>
+      DashViewCar does <strong>not collect, store or transmit any personal data</strong>. Everything stays on your device.
+    </div>
+
+    <h2>👤 Who we are</h2>
+    <p>DashViewCar is an Android application developed by Emmanuel Ulderic, an independent developer based in France (Alsace). Contact: <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
+
+    <h2>📊 Data collected</h2>
+    <p>The app works entirely <strong style="color:#fff">offline</strong>. No data ever leaves your device.</p>
+
+    <div class="perm-grid">
+      <div class="perm-item">
+        <div class="perm-icon">🎤</div>
+        <div>
+          <div class="perm-name">MICROPHONE</div>
+          <div class="perm-desc">Local voice recognition only (Vosk offline engine). No audio is transmitted to external servers.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">📷</div>
+        <div>
+          <div class="perm-name">CAMERA</div>
+          <div class="perm-desc">Dashcam video recording. Clips are stored only on your device.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">📍</div>
+        <div>
+          <div class="perm-name">GPS LOCATION</div>
+          <div class="perm-desc">Detection of sudden speed drops and clip timestamping. GPS coordinates never leave your device.</div>
+        </div>
+      </div>
+      <div class="perm-item">
+        <div class="perm-icon">💾</div>
+        <div>
+          <div class="perm-name">STORAGE</div>
+          <div class="perm-desc">Local clip storage in the <code style="color:#00D4FF">/DashViewCar/clips/</code> folder.</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🚫 What we do NOT do</h2>
+    <div class="no-collect-grid">
+      <div class="no-item"><span>❌</span><span>No account required</span></div>
+      <div class="no-item"><span>❌</span><span>No external servers</span></div>
+      <div class="no-item"><span>❌</span><span>No ad tracking</span></div>
+      <div class="no-item"><span>❌</span><span>No third-party sharing</span></div>
+      <div class="no-item"><span>❌</span><span>No cookies</span></div>
+      <div class="no-item"><span>❌</span><span>No analytics</span></div>
+    </div>
+
+    <h2>🔐 Security</h2>
+    <p>All data stays on your device. The app has no network connection to transmit your data. Source code is available on <a href="https://github.com/Manu974u/Dashview" target="_blank">GitHub</a>.</p>
+
+    <h2>👶 Children</h2>
+    <p>DashViewCar is not intended for children under 13 and does not collect any data from them.</p>
+
+    <h2>📝 Changes</h2>
+    <p>This policy may be updated. The last modification date is shown at the top of this page.</p>
+
+    <h2>✉️ Contact</h2>
+    <p>For any privacy questions: <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
+  </div>
+
 </div>
 
-<!-- VERSION FRANÇAISE -->
-<div class="section-fr">
-  <h1>🚗 DashViewCar — Politique de confidentialité</h1>
-  <p class="updated">Dernière mise à jour : avril 2025</p>
-
-  <h2>1. Qui sommes-nous ?</h2>
-  <p>DashViewCar est une application Android développée par Emmanuel Ulderic, développeur indépendant basé en France. Cette politique décrit comment l'application traite vos données.</p>
-
-  <h2>2. Données collectées</h2>
-  <p><strong>DashViewCar ne collecte aucune donnée personnelle.</strong> L'application fonctionne entièrement hors ligne.</p>
-  <ul>
-    <li>🎤 <strong>Microphone</strong> : utilisé uniquement pour la reconnaissance vocale locale (moteur Vosk offline). Aucun audio n'est transmis à des serveurs externes.</li>
-    <li>📷 <strong>Caméra</strong> : utilisée pour l'enregistrement vidéo. Les clips sont stockés uniquement sur votre appareil.</li>
-    <li>📍 <strong>Localisation GPS</strong> : utilisée pour détecter les chutes de vitesse brutales et horodater les clips. Les coordonnées GPS ne quittent jamais votre appareil.</li>
-    <li>💾 <strong>Stockage</strong> : les clips vidéo sont sauvegardés localement dans le dossier <code>/DashViewCar/clips/</code> de votre appareil.</li>
-  </ul>
-
-  <h2>3. Données NON collectées</h2>
-  <ul>
-    <li>❌ Aucun compte utilisateur requis</li>
-    <li>❌ Aucune donnée envoyée à des serveurs</li>
-    <li>❌ Aucun tracking publicitaire</li>
-    <li>❌ Aucun partage avec des tiers</li>
-    <li>❌ Aucun cookie</li>
-  </ul>
-
-  <h2>4. Permissions Android</h2>
-  <p>L'application demande les permissions suivantes, utilisées uniquement pour son fonctionnement local :</p>
-  <ul>
-    <li><strong>CAMERA</strong> — enregistrement vidéo dashcam</li>
-    <li><strong>RECORD_AUDIO</strong> — reconnaissance vocale offline "Go Dash"</li>
-    <li><strong>ACCESS_FINE_LOCATION</strong> — détection vitesse GPS</li>
-    <li><strong>FOREGROUND_SERVICE</strong> — écoute vocale en arrière-plan</li>
-    <li><strong>WAKE_LOCK</strong> — maintien actif pendant l'écoute</li>
-    <li><strong>WRITE_EXTERNAL_STORAGE</strong> — sauvegarde des clips vidéo</li>
-  </ul>
-
-  <h2>5. Sécurité</h2>
-  <p>Toutes les données restent sur votre appareil. L'application ne dispose d'aucune connexion réseau pour transmettre vos données.</p>
-
-  <h2>6. Enfants</h2>
-  <p>DashViewCar n'est pas destinée aux enfants de moins de 13 ans et ne collecte aucune donnée les concernant.</p>
-
-  <h2>7. Modifications</h2>
-  <p>Cette politique peut être mise à jour. La date de dernière modification est indiquée en haut de cette page.</p>
-
-  <h2>8. Contact</h2>
-  <p>Pour toute question : <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
-</div>
-
-<!-- VERSION ANGLAISE -->
-<div class="section-en">
-  <h1>🚗 DashViewCar — Privacy Policy</h1>
-  <p class="updated">Last updated: April 2025</p>
-
-  <h2>1. Who are we?</h2>
-  <p>DashViewCar is an Android application developed by Emmanuel Ulderic, an independent developer based in France. This policy describes how the application handles your data.</p>
-
-  <h2>2. Data collected</h2>
-  <p><strong>DashViewCar does not collect any personal data.</strong> The app works entirely offline.</p>
-  <ul>
-    <li>🎤 <strong>Microphone</strong> : used only for local voice recognition (Vosk offline engine). No audio is transmitted to external servers.</li>
-    <li>📷 <strong>Camera</strong> : used for video recording. Clips are stored only on your device.</li>
-    <li>📍 <strong>GPS Location</strong> : used to detect sudden speed drops and timestamp clips. GPS coordinates never leave your device.</li>
-    <li>💾 <strong>Storage</strong> : video clips are saved locally in the <code>/DashViewCar/clips/</code> folder on your device.</li>
-  </ul>
-
-  <h2>3. Data NOT collected</h2>
-  <ul>
-    <li>❌ No user account required</li>
-    <li>❌ No data sent to servers</li>
-    <li>❌ No advertising tracking</li>
-    <li>❌ No third-party sharing</li>
-    <li>❌ No cookies</li>
-  </ul>
-
-  <h2>4. Android Permissions</h2>
-  <p>The app requests the following permissions, used only for local operation:</p>
-  <ul>
-    <li><strong>CAMERA</strong> — dashcam video recording</li>
-    <li><strong>RECORD_AUDIO</strong> — offline voice recognition "Go Dash"</li>
-    <li><strong>ACCESS_FINE_LOCATION</strong> — GPS speed detection</li>
-    <li><strong>FOREGROUND_SERVICE</strong> — background voice listening</li>
-    <li><strong>WAKE_LOCK</strong> — keep active during listening</li>
-    <li><strong>WRITE_EXTERNAL_STORAGE</strong> — video clip storage</li>
-  </ul>
-
-  <h2>5. Security</h2>
-  <p>All data stays on your device. The app has no network connection to transmit your data.</p>
-
-  <h2>6. Children</h2>
-  <p>DashViewCar is not intended for children under 13 and does not collect any data from them.</p>
-
-  <h2>7. Changes</h2>
-  <p>This policy may be updated. The last modification date is shown at the top of this page.</p>
-
-  <h2>8. Contact</h2>
-  <p>For any questions: <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a></p>
-</div>
+<footer>
+  © 2025 DashViewCar · Emmanuel Ulderic · <a href="mailto:manu974u@outlook.fr">manu974u@outlook.fr</a>
+</footer>
 
 <script>
-  function showFR() {
+  function showFR(btn) {
     document.querySelector('.section-fr').style.display = 'block';
     document.querySelector('.section-en').style.display = 'none';
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
   }
-  function showEN() {
+  function showEN(btn) {
     document.querySelector('.section-fr').style.display = 'none';
     document.querySelector('.section-en').style.display = 'block';
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
   }
 </script>
 
